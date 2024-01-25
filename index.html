@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        #question {
+            font-size: 24px;
+            margin-top: 50px;
+        }
+
+        #question span{
+            font-size: 25px;
+            font-weight: bold;
+            color: #fa8888;
+        }
+
+        #options {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            text-decoration: none;
+            border: 2px solid #333;
+            border-radius: 5px;
+            color: #333;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #fa8888;
+            color: #fff;
+        }
+
+        .img{
+            margin: 20px;
+            max-height: 400px;
+        }
+
+        #no-btn:hover {
+            transform: translateX(-5px);
+        }
+
+        @media screen and (max-width: 768px) {
+            .btn {
+                font-size: 16px;
+            }
+
+
+            .img{
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="question"><span>Гулден!!! Қошақан</span> пойдешь со мной на свидание?</div>
+
+<img class="img" src="assets/img/image_860410170025011628173.gif">
+
+
+<div id="options">
+    <a href="result.html" class="btn" id="yes-btn">Да</a>
+    <a href="#" class="btn" id="no-btn" ontouchstart="moveNoButton()" onmouseover="moveNoButton()">Нет</a>
+</div>
+
+<script>
+    function moveNoButton() {
+        // Получаем кнопку "Нет"
+        var noButton = document.getElementById('no-btn');
+
+        // Генерируем случайное положение кнопки в пределах ширины окна
+        var randomPosition = Math.floor(Math.random() * window.innerWidth/5.5);
+        var randomPosition2 = Math.floor(Math.random() * window.innerWidth/5.5);
+        var randomPosition3 = Math.floor(Math.random() * window.innerWidth/5.5);
+        var randomPosition4 = Math.floor(Math.random() * window.innerWidth/5.5);
+        noButton.style.position = 'relative'
+        // Устанавливаем новое положение кнопки
+        noButton.style.top = randomPosition + 'px';
+        noButton.style.left = randomPosition2 + 'px';
+        noButton.style.right = randomPosition3 + 'px';
+        noButton.style.bottom = randomPosition4 + 'px';
+    }
+
+
+
+</script>
+
+</body>
+</html>
