@@ -51,6 +51,17 @@
             transform: translateX(-5px);
         }
 
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .name{
+            color: #fa8888;
+        }
+
         @media screen and (max-width: 768px) {
             .btn {
                 font-size: 16px;
@@ -64,15 +75,19 @@
     </style>
 </head>
 <body>
-<div id="question"><span>Гулден!!! Қошақан</span> пойдешь со мной на свидание?</div>
+<div id="question"><span><a class="name" href="names.html">Гулден</a>!!! Қошақан</span> пойдешь со мной на свидание?</div>
 
-<img class="img" src="assets/img/image_860410170025011628173.gif">
+<a href="bles.html"><img class="img" src="assets/img/image_860410170025011628173.gif"></a>
 
 
 <div id="options">
     <a href="result.html" class="btn" id="yes-btn">Да</a>
     <a href="#" class="btn" id="no-btn" ontouchstart="moveNoButton()" onmouseover="moveNoButton()">Нет</a>
 </div>
+
+<footer>
+    Все права защищены &copy; 2024
+</footer>
 
 <script>
     function moveNoButton() {
